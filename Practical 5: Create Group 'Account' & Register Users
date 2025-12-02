@@ -1,0 +1,13 @@
+Step 1: Create the Group
+sudo groupadd Account
+
+Step 2: Create Users (emp1 to emp4) and add them to the group
+# -m creates home directory, -g assigns primary group 
+sudo useradd -m -g Account emp1 
+sudo useradd -m -g Account emp2 
+sudo useradd -m -g Account emp3 
+sudo useradd -m -g Account emp4
+
+Step 3: Set Passwords for them
+sudo passwd emp1
+# (Enter password twice. Repeat for emp2, emp3, emp4)

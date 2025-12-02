@@ -1,0 +1,29 @@
+Step 1: Create the Directory Structure
+Run the following commands one by one (or paste them) to create the tree:
+# Create directories ( -p creates parent directories automatically)
+mkdir -p ~/Study/GNU/DCS/IT mkdir -p ~/Study/GNU/DCS/CS 
+mkdir -p ~/Study/GNU/Engineering/Computer 
+mkdir -p ~/Study/GNU/Engineering/Civil
+mkdir -p ~/Study/HNGU/BBA 
+# Create the required files in the CS directory
+touch ~/Study/GNU/DCS/CS/DivA.txt 
+touch ~/Study/GNU/DCS/CS/DivB.txt
+touch ~/Study/GNU/DCS/CS/DivC.txt 
+touch ~/Study/GNU/DCS/CS/Sports 
+touch ~/Study/GNU/DCS/CS/Marksheet
+
+Step 2: Perform the Operations
+Operation A: Copy ALL Files of CS Directory to Engineering > Civil
+cp ~/Study/GNU/DCS/CS/* ~/Study/GNU/Engineering/Civil/
+
+Operation B: Remove all Files of Civil with Interactive mode
+
+# -i asks for confirmation before deleting rm -i ~/Study/GNU/Engineering/Civil/*
+(Type 'y' and Enter for each file prompt)
+
+Operation C: Move files starting with ‘S’ and ‘M’ from CS to Computer
+mv ~/Study/GNU/DCS/CS/[SM]* ~/Study/GNU/Engineering/Computer/
+
+Operation D: Set Engineering as PWD and Delete Directory Structure of Civil interactively
+# Change directory (PWD means Present Working Directory) cd ~/Study/GNU/Engineering
+# Delete Civil directory recursively (-r) and interactively (-i) rm -ri Civil

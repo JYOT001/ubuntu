@@ -1,0 +1,11 @@
+To let members of the Account group manage users (adduser, userdel, passwd), you must edit the sudoers file.
+
+1. Open the sudo configuration: 
+sudo visudo
+
+2. Scroll to the bottom and add this line: 
+%Account ALL=(ALL) /usr/sbin/useradd, /usr/sbin/userdel, 
+/usr/bin/passwd
+(This allows anyone in the 'Account' group to run useradd, userdel, and passwd commands as root).
+
+3. Save and Exit (Ctrl+O, Enter, Ctrl+X).

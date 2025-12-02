@@ -1,0 +1,17 @@
+1. Open a new file: nano add_n_loop.sh
+2. Type the code:
+<!-- end list -->
+#!/bin/bash echo "Enter how many numbers you want to add (N):"
+read N 
+sum=0 
+
+echo "Enter the numbers:" 
+for (( i=1; i<=N; i++ )) 
+do
+read num 
+sum=`expr $sum + $num` 
+done 
+echo "Total Sum is: $sum"
+
+1. Save and Exit.
+2. Run: bash add_n_loop.sh

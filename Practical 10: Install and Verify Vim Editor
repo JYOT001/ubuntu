@@ -1,0 +1,14 @@
+Step 1: Update repositories
+sudo apt update
+
+Step 2: Install Vim
+sudo apt install vim
+
+Step 3: Verify Installation
+vim --version
+
+Step 4: Open and Close Vim (Optional)
+● Type vim to open.
+● Type :q and hit Enter to exit.
+
+<!-- end list -->

@@ -1,0 +1,7 @@
+To give a normal user "Root" (Administrator) privileges, you usually add them to the sudo group.
+
+Command:
+# Syntax: sudo usermod -aG sudo <username> sudo usermod -aG sudo student
+
+(Replace 'student' with the actual username)
+Verify: Switch to that user and try running a root command (like sudo apt update).

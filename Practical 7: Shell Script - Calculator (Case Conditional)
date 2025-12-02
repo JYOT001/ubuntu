@@ -1,0 +1,44 @@
+1. Open file: nano calculator.sh
+2. Type the code:
+<!-- end list -->
+
+#!/bin/bash
+echo "***** Here is the calculator for you *****" 
+sum=0 
+ch="y" 
+
+echo "Enter first number:"
+read n1 
+echo "Enter second number:"
+read n2 
+while [ "$ch" = "y" ] do 
+echo "1. Addition" 
+echo "2. Subtraction" 
+echo "3. Multiplication" 
+echo "4. Division"
+echo "Enter choice:" 
+read choice 
+case $choice in
+1) sum=`expr $n1 + $n2` 
+echo "Addition is = $sum" ;; 
+
+2) sum=`expr $n1 - $n2` 
+echo "Sub is = $sum" ;; 
+
+3) sum=`expr $n1 \* $n2` 
+echo "Mul is = $sum" ;; 
+
+4) sum=`expr $n1 / $n2` 
+echo "Div is = $sum" ;; 
+
+*) echo "Invalid choice" ;; 
+esac 
+
+echo "Do you want to continue (y/n)?" 
+read ch 
+if [ "$ch" != "y" ]; then 
+exit
+fi 
+done
+
+1. Run: bash calculator.sh

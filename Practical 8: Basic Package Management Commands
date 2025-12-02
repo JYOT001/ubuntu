@@ -1,0 +1,26 @@
+You need to know these commands for the apt package manager (using tree as an example).
+Operation
+Command
+Description
+Update List
+sudo apt update
+Refreshes list of available software.
+Install
+sudo apt install tree
+Installs the package 'tree'.
+Operation Command Description
+Remove
+sudo apt remove tree
+Removes package but keeps config files.
+Purge
+sudo apt purge tree
+Removes package AND config files.
+Check Install
+`dpkg -l
+grep tree`
+Check Path
+which tree
+Shows where the file is located.
+Clean Up
+sudo apt autoremove
+Deletes unused dependencies.
